@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --breakpoint-*: initial;
+}
+
+@custom-variant 2xl (@media (max-width: 1600px));
+@custom-variant xl (@media (max-width: 1200px));
+@custom-variant lg (@media (max-width: 1000px));
+@custom-variant md (@media (max-width: 800px));
+@custom-variant sm (@media (max-width: 430px));
+
+@layer base {
+  p,
+  a,
+  h1,
+  label {
+    margin: 0;
+    padding: 0;
+  }
+  input,
+  textarea {
+    outline: none;
+  }
+}
