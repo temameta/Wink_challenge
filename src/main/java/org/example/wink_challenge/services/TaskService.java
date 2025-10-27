@@ -1,7 +1,7 @@
 package org.example.wink_challenge.services;
 
 import org.example.wink_challenge.entities.TaskEntity;
-import org.example.wink_challenge.repository_interfaces.TaskRepository;
+import org.example.wink_challenge.repositories.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
