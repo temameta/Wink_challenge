@@ -27,6 +27,9 @@ public class TaskController {
         return taskService.getAllTasks();
     }
 
+    @GetMapping("/get/id/{id}")
+    public TaskEntity getTaskById(@PathVariable long id) {return taskService.getTaskById(id);}
+
     @GetMapping("/get/is-done/{isDone}")
     public List<TaskEntity> getTasksByIsDone(@PathVariable boolean isDone) {return taskService.getTasksByIsDoneTasks(isDone);}
 

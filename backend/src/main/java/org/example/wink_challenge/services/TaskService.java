@@ -31,4 +31,6 @@ public class TaskService {
     public List<TaskEntity> getTasksByIsDoneTasks(boolean isDone) {return taskRepository.findByIsDone(isDone);}
 
     public List<TaskEntity> getTasksByDeadline(Instant deadline) {return taskRepository.findByDeadline(deadline);}
+
+    public TaskEntity getTaskById(long id) {return taskRepository.findById(id);}
 }
