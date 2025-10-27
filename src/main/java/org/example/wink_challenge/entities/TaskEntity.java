@@ -21,14 +21,18 @@ public class TaskEntity {
     @Column(nullable = false)
     private Instant deadline;
 
+    @Column(nullable = false, name = "is_done")
+    private boolean isDone;
+
     public TaskEntity() {
     }
 
-    public TaskEntity(Long id, String name, String description, Instant deadline) {
+    public TaskEntity(Long id, String name, String description, Instant deadline, boolean isDone) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.deadline = deadline;
+        this.isDone = isDone;
     }
 
     public Long getId() {
@@ -61,5 +65,13 @@ public class TaskEntity {
 
     public void setDeadline(Instant deadline) {
         this.deadline = deadline;
+    }
+
+    public boolean isDone() {
+        return isDone;
+    }
+
+    public void setDone(boolean done) {
+        isDone = done;
     }
 }
