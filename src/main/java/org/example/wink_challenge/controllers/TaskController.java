@@ -5,6 +5,7 @@ import org.example.wink_challenge.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Instant;
 import java.util.List;
 
 @RestController
@@ -21,8 +22,17 @@ public class TaskController {
         return taskService.saveTask(task);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<TaskEntity> getAllTasks() {
         return taskService.getAllTasks();
     }
+
+    @GetMapping("/get/is-done/{isDone}")
+    public List<TaskEntity> getTasksByIsDone(@PathVariable boolean isDone) {return taskService.getTasksByIsDoneTasks(isDone);}
+
+    @GetMapping("/get/name/{name}")
+    public TaskEntity getTaskByName(@PathVariable String name) {return taskService.getTaskByName(name);}
+
+    @GetMapping("/get/deadline/{deadline}")
+    public List<TaskEntity> getTasksByDeadline(@PathVariable Instant deadline) {return taskService.getTasksByDeadline(deadline);}
 }
