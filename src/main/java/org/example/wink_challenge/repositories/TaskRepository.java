@@ -12,4 +12,5 @@ public interface TaskRepository extends JpaRepository<TaskEntity, Long> {
     TaskEntity findByName(String name);
     List<TaskEntity> findByIsDone(boolean isDone);
     List<TaskEntity> findByDeadline(Instant deadline);
+    TaskEntity findById(long id);
 }
