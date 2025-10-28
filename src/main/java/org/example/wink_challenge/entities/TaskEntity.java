@@ -3,6 +3,7 @@ package org.example.wink_challenge.entities;
 import jakarta.persistence.*;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -19,7 +20,7 @@ public class TaskEntity {
     private String description;
 
     @Column(nullable = false)
-    private Instant deadline;
+    private LocalDate deadline;
 
     @Column(nullable = false, name = "is_done")
     private boolean isDone;
@@ -27,7 +28,7 @@ public class TaskEntity {
     public TaskEntity() {
     }
 
-    public TaskEntity(long id, String name, String description, Instant deadline, boolean isDone) {
+    public TaskEntity(long id, String name, String description, LocalDate deadline, boolean isDone) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -47,7 +48,7 @@ public class TaskEntity {
         return description;
     }
 
-    public Instant getDeadline() {
+    public LocalDate getDeadline() {
         return deadline;
     }
 
@@ -63,7 +64,7 @@ public class TaskEntity {
         this.description = description;
     }
 
-    public void setDeadline(Instant deadline) {
+    public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
     }
 
