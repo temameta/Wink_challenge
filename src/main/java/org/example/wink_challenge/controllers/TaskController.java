@@ -3,8 +3,12 @@ package org.example.wink_challenge.controllers;
 import org.example.wink_challenge.entities.TaskEntity;
 import org.example.wink_challenge.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.http.server.ServerHttpResponse;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -16,13 +20,26 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    @PostMapping
+    @PostMapping()
+    @CrossOrigin(origins = "http://localhost:3000")
     public TaskEntity createTask(@RequestBody TaskEntity task) {
         return taskService.saveTask(task);
     }
 
-    @GetMapping
+    @GetMapping("/all")
     public List<TaskEntity> getAllTasks() {
         return taskService.getAllTasks();
     }
+
+    @GetMapping("/get/id/{id}")
+    public TaskEntity getTaskById(@PathVariable long id) {return taskService.getTaskById(id);}
+
+    @GetMapping("/get/is-done/{isDone}")
+    public List<TaskEntity> getTasksByIsDone(@PathVariable boolean isDone) {return taskService.getTasksByIsDoneTasks(isDone);}
+
+    @GetMapping("/get/name/{name}")
+    public TaskEntity getTaskByName(@PathVariable String name) {return taskService.getTaskByName(name);}
+
+    @GetMapping("/get/deadline/{deadline}")
+    public List<TaskEntity> getTasksByDeadline(@PathVariable LocalDate deadline) {return taskService.getTasksByDeadline(deadline);}
 }

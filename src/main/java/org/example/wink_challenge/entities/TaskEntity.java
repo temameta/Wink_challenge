@@ -3,6 +3,7 @@ package org.example.wink_challenge.entities;
 import jakarta.persistence.*;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     @Column(nullable = false, unique = true)
     private String name;
@@ -19,16 +20,20 @@ public class TaskEntity {
     private String description;
 
     @Column(nullable = false)
-    private Instant deadline;
+    private LocalDate deadline;
+
+    @Column(nullable = false, name = "is_done")
+    private boolean isDone;
 
     public TaskEntity() {
     }
 
-    public TaskEntity(Long id, String name, String description, Instant deadline) {
+    public TaskEntity(long id, String name, String description, LocalDate deadline, boolean isDone) {
         this.id = id;
         this.name = name;
         this.description = description;
         this.deadline = deadline;
+        this.isDone = isDone;
     }
 
     public Long getId() {
@@ -43,11 +48,11 @@ public class TaskEntity {
         return description;
     }
 
-    public Instant getDeadline() {
+    public LocalDate getDeadline() {
         return deadline;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -59,7 +64,15 @@ public class TaskEntity {
         this.description = description;
     }
 
-    public void setDeadline(Instant deadline) {
+    public void setDeadline(LocalDate deadline) {
         this.deadline = deadline;
+    }
+
+    public boolean isDone() {
+        return isDone;
+    }
+
+    public void setDone(boolean done) {
+        isDone = done;
     }
 }
