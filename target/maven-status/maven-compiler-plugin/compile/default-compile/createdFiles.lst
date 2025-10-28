@@ -1,0 +1,9 @@
+org\example\wink_challenge\controllers\TaskController.class
+org\example\wink_challenge\services\TaskService.class
+org\example\wink_challenge\controllers\AuthController.class
+org\example\wink_challenge\repositories\TaskRepository.class
+org\example\wink_challenge\config\WebConfig.class
+org\example\wink_challenge\controllers\TasksCreationController.class
+org\example\wink_challenge\WinkChallengeApplication.class
+org\example\wink_challenge\entities\TaskEntity.class
+org\example\wink_challenge\controllers\ApiController.class
