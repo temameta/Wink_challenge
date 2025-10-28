@@ -1,45 +1,31 @@
-import Bell from "@/assets/Bell.svg";
-import Arrow from "@/assets/Arrow.svg";
-import BarChart from "@/assets/BarChart.svg";
-import NavbarLink from "./NavbarLink";
+import Bell from '@/assets/Bell.svg';
+import User from '@/assets/User.svg';
+import NavbarLink from './NavbarLink';
 interface INavbarLink {
-  text: string;
-  imgSrc: string;
-  href: string;
+	imgSrc: string;
+	href: string;
 }
 
 const NavbarLinks: INavbarLink[] = [
-  {
-    text: "Мои задачи",
-    imgSrc: Bell.src,
-    href: "",
-  },
-  {
-    text: "Оценка 360",
-    imgSrc: Arrow.src,
-    href: "",
-  },
-  {
-    text: "Самооценка",
-    imgSrc: BarChart.src,
-    href: "",
-  },
+	{
+		imgSrc: Bell.src,
+		href: '/',
+	},
+	{
+		imgSrc: User.src,
+		href: '/',
+	},
 ];
 const Navbar = () => {
-  return (
-    <div className="z-10 pl-[215px] fixed top-0 left-0 bg-[#5F37A8] h-[80px] w-full flex justify-around items-end">
-      {NavbarLinks.map((link, linkInd) => {
-        return (
-          <NavbarLink
-            key={linkInd}
-            text={link.text}
-            href={link.href}
-            imgSrc={link.imgSrc}
-          />
-        );
-      })}
-    </div>
-  );
+	return (
+		<div className='bg-[#3C3C3C] w-full flex flex-col justify-between'>
+			<div className='flex justify-end items-start pr-[33px] pt-[23px] pb-[31px]  gap-[15px]'>
+				{NavbarLinks.map((link, linkInd) => {
+					return <NavbarLink key={linkInd} imgSrc={link.imgSrc} href={link.href} />;
+				})}
+			</div>
+		</div>
+	);
 };
 
 export default Navbar;
