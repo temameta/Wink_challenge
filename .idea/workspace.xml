@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="dd877959-1248-4220-b60c-69c871881787" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/org/example/wink_challenge/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/java/org/example/wink_challenge/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/resources/templates/authentification.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/resources/templates/authentification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/main/resources/templates/create_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/resources/templates/create_tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/config/WebConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/ApiController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/TaskController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/entities/TaskEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/entities/TaskEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/repositories/TaskRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/services/TaskService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/authentification.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/templates/authentification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/templates/create_tasks.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
+  </component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/temameta/Wink_challenge.git",
+    "accountId": "e7ec0855-bb34-4ded-b671-eeddb846c6dc"
+  }
+}]]></component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "master",
+    "node.js.selected.package.tslint": "(autodetect)"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\sezem\IdeaProjects\Wink_challenge\backend" />
+      <recent name="C:\Users\sezem\IdeaProjects\Wink_challenge" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="WinkChallengeApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="Wink_challenge" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="org.example.wink_challenge.WinkChallengeApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+</project>
