@@ -4,47 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd877959-1248-4220-b60c-69c871881787" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jarRepositories.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/jarRepositories.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/org/example/wink_challenge/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/java/org/example/wink_challenge/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/main/resources/templates/authentification.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/resources/templates/authentification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/main/resources/templates/create_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/main/resources/templates/create_tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/compose.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/backend/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/WinkChallengeApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/config/WebConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/config/WebConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/ApiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/ApiController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/AuthController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/TaskController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/TaskController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/entities/TaskEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/entities/TaskEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/repositories/TaskRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/repositories/TaskRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/wink_challenge/services/TaskService.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/services/TaskService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/authentification.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/templates/authentification.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/create_tasks.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/main/resources/templates/create_tasks.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/backend/src/test/java/org/example/wink_challenge/WinkChallengeApplicationTests.java" afterDir="false" />
+    <list default="true" id="dd877959-1248-4220-b60c-69c871881787" name="Changes" comment="merge backend and frontend folders">
+      <change afterPath="$PROJECT_DIR$/backend/.dockerignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/backend/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/backend/compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/ApiController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/java/org/example/wink_challenge/controllers/TasksCreationController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/authentification.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/src/main/resources/templates/create_tasks.html" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -83,6 +53,27 @@
     </configuration>
   </component>
   <component name="TaskManager">
+    <task id="LOCAL-00001" summary="merge backend and frontend folders">
+      <option name="closed" value="true" />
+      <created>1761657280534</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1761657280534</updated>
+    </task>
+    <task id="LOCAL-00002" summary="merge backend and frontend folders">
+      <option name="closed" value="true" />
+      <created>1761657340575</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1761657340575</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="merge backend and frontend folders" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge backend and frontend folders" />
   </component>
 </project>
