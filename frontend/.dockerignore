@@ -1,0 +1,40 @@
+# Зависимости
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Сборка
+.next/
+out/
+dist
+
+# Файлы окружения
+.env
+.env*.local
+
+# Логи
+*.log
+
+# Системные файлы
+.DS_Store
+*.pem
+
+# IDE
+.vscode/
+.idea/
+
+# Git
+.git/
+.gitignore
+
+# Кэш
+.cache
+.turbo
+
+# Тесты
+coverage/
+.nyc_output
+
+# Документация
+docs/
