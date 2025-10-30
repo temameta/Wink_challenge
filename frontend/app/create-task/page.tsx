@@ -5,6 +5,7 @@ import { createGoal } from './createGoal';
 import Save from '@/assets/Save.svg';
 import Close from '@/assets/Close.svg';
 import Close2 from '@/assets/Close2.svg';
+import Header from '@/components/Header/Header';
 
 enum Priorities {
 	Low = 'Низкий',
@@ -78,11 +79,7 @@ const CreateGoal = () => {
 
 	return (
 		<div className='pr-[124px]'>
-			<div className='bg-[#3C3C3C] w-screen pb-[1px]'>
-				<div className='py-[12px] flex bg-[#FF7D51] justify-center items-center w-screen rounded-[15px] shadow-[0px_4px_4px_0px_#00000040]'>
-					<h1 className='font-normal text-[24px] text-white'>Создание цели</h1>
-				</div>
-			</div>
+			<Header text='Создание цели' />
 
 			<div className='mt-[26px] w-full mx-auto pt-[30px] pb-[36px] pr-[26px] pl-[61px] bg-[#D7D7D7] rounded-r-[15px] shadow-[0px_4px_4px_0px_#00000040_inset]'>
 				<form onSubmit={handleSubmit(onSubmit)} className='relative'>
