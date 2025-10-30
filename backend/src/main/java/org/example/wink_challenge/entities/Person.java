@@ -17,12 +17,6 @@ public class Person {
     @NotNull
     private String username;
 
-    @Min(value = 1900, message = "Слишком старый, не раньше 1900")
-    @Max(value = 2007, message = "Учи уроки")
-    @NotNull
-    @Column(name = "year_of_birth")
-    private int yearOfBirth;
-
     @Column(name = "password")
     @NotNull
     @NotEmpty(message = "Не должен быть пустым")
@@ -35,9 +29,8 @@ public class Person {
     public Person() {
     }
 
-    public Person(String username, int yearOfBirth) {
+    public Person(String username) {
         this.username = username;
-        this.yearOfBirth = yearOfBirth;
     }
 
     public int getId() {
@@ -56,13 +49,6 @@ public class Person {
         this.username = username;
     }
 
-    public int getYearOfBirth() {
-        return yearOfBirth;
-    }
-
-    public void setYearOfBirth(int yearOfBirth) {
-        this.yearOfBirth = yearOfBirth;
-    }
 
     public String getPassword() {
         return password;
@@ -85,7 +71,6 @@ public class Person {
         return "Person{" +
                 "id=" + id +
                 ", username='" + username + '\'' +
-                ", yearOfBirth=" + yearOfBirth +
                 ", password='" + password + '\'' +
                 '}';
     }
