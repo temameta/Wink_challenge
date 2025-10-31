@@ -43,20 +43,14 @@ public class SecurityConfig {
         );
 
         http.authorizeHttpRequests((authz) -> authz
-         //                       .requestMatchers("/admin").hasRole("ADMIN")
-                                .requestMatchers("/auth/hello").permitAll()
-                                .requestMatchers("/auth/login", "/error", "auth/registration").permitAll()
+                                .requestMatchers("/auth/login", "/error", "/auth/registration").permitAll()
                                 .anyRequest().hasAnyRole("USER", "ADMIN")
-                        //.requestMatchers("/**").authenticated()
                 )
                 .httpBasic(withDefaults());
 
         http.csrf((csrf) -> csrf
                 .ignoringRequestMatchers("/auth/*")
-        );
-
-        http.sessionManagement(managementConfigurer ->
-                managementConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS)
+                .ignoringRequestMatchers("/process_login")
         );
 
         return http.build();
