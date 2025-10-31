@@ -101,4 +101,6 @@ public class GoalEntity {
     public void setTasks(List<TaskEntity> tasks) {
         this.tasks = tasks;
     }
+
+
 }

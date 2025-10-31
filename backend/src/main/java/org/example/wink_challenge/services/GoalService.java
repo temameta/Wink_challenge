@@ -1,5 +1,6 @@
 package org.example.wink_challenge.services;
 
+import org.example.wink_challenge.dtos.GoalDTO;
 import org.example.wink_challenge.entities.GoalEntity;
 import org.example.wink_challenge.entities.TaskEntity;
 import org.example.wink_challenge.repositories.GoalRepository;
@@ -33,4 +34,16 @@ public class GoalService {
     public List<GoalEntity> getGoalsByDeadline(LocalDate deadline) {return goalRepository.findByDeadline(deadline);}
 
     public GoalEntity getGoalById(long id) {return goalRepository.findById(id);}
+
+    public GoalDTO toDTO(GoalEntity goalEntity) {
+        return new GoalDTO(
+                goalEntity.getId(),
+                goalEntity.getName(),
+                goalEntity.getDescription(),
+                goalEntity.isDone(),
+                goalEntity.getDeadline(),
+                goalEntity.getExpectedResult(),
+                goalEntity.getTasks()
+        );
+    }
 }
