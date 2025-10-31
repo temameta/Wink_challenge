@@ -29,7 +29,7 @@ public class GoalEntity {
     @ColumnDefault("false")
     private boolean isDone;
 
-    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "goal")
+    @OneToMany(fetch = FetchType.LAZY, mappedBy = "goal")
     @Column(nullable = false)
     private List<TaskEntity> tasks;
 

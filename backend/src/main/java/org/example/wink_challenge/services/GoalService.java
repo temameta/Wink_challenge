@@ -35,15 +35,5 @@ public class GoalService {
 
     public GoalEntity getGoalById(long id) {return goalRepository.findById(id);}
 
-    public GoalDTO toDTO(GoalEntity goalEntity) {
-        return new GoalDTO(
-                goalEntity.getId(),
-                goalEntity.getName(),
-                goalEntity.getDescription(),
-                goalEntity.isDone(),
-                goalEntity.getDeadline(),
-                goalEntity.getExpectedResult(),
-                goalEntity.getTasks()
-        );
-    }
+
 }
