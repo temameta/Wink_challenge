@@ -1,0 +1,47 @@
+services:
+  backend:
+    image: wink_backend
+    build:
+      context: ./backend
+    depends_on:
+      db:
+        condition: service_healthy
+    environment:
+      - SPRING_PROFILES_ACTIVE=docker
+      - DATABASE_URL=jdbc:postgresql://db:5432/wink_challenge
+      - DATABASE_USERNAME=postgres
+      - DATABASE_PASSWORD=postgres
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/wink_challenge
+      - SPRING_DATASOURCE_USERNAME=postgres
+      - SPRING_DATASOURCE_PASSWORD=postgres
+    ports:
+      - "8080:8080"
+  frontend:
+    image: wink_frontend
+    build:
+      context: ./frontend
+    ports:
+      - "3000:3000"
+    environment:
+      BACKEND_HOST: backend
+      BACKEND_PORT: 8080
+    depends_on:
+      - backend
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: wink_challenge
+      POSTGRES_PASSWORD: "postgres"
+      POSTGRES_USER: "postgres"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres -d wink_challenge"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    ports:
+      - '5432:5432'
+    volumes:
+      - db-data:/var/lib/posgtresql/data
+
+volumes:
+  db-data:

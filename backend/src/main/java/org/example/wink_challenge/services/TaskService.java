@@ -5,6 +5,8 @@ import org.example.wink_challenge.repositories.TaskRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.Instant;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -26,4 +28,10 @@ public class TaskService {
     public TaskEntity getTaskByName(String name) {
         return taskRepository.findByName(name);
     }
+
+    public List<TaskEntity> getTasksByIsDoneTasks(boolean isDone) {return taskRepository.findByIsDone(isDone);}
+
+    public List<TaskEntity> getTasksByDeadline(LocalDate deadline) {return taskRepository.findByDeadline(deadline);}
+
+    public TaskEntity getTaskById(long id) {return taskRepository.findById(id);}
 }
