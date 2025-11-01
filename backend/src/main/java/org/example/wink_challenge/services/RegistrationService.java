@@ -1,5 +1,7 @@
 package org.example.wink_challenge.services;
 
+import org.example.wink_challenge.dto.RegisterRequest;
+import org.example.wink_challenge.dto.RegisterResponse;
 import org.example.wink_challenge.entities.Person;
 import org.example.wink_challenge.repositories.PeopleRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,11 +21,16 @@ public class RegistrationService {
     }
 
     @Transactional
-    public void register(Person person) {
-        String encodedPassword = passwordEncoder.encode(person.getPassword());
+    public RegisterResponse register(RegisterRequest registerRequest) {
+        String encodedPassword = passwordEncoder.encode(registerRequest.getPassword());
+
+        Person person = new Person();
         person.setPassword(encodedPassword);
+        person.setUsername(registerRequest.getUsername());
         person.setRole("ROLE_USER");
 
         peopleRepository.save(person);
+
+        return new RegisterResponse(true, person.getUsername());
     }
 }

@@ -1,16 +1,21 @@
 package org.example.wink_challenge.controllers;
 
 import jakarta.validation.Valid;
+import org.example.wink_challenge.dto.RegisterRequest;
+import org.example.wink_challenge.dto.RegisterResponse;
 import org.example.wink_challenge.entities.Person;
 import org.example.wink_challenge.services.RegistrationService;
 import org.example.wink_challenge.util.PersonValidator;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
-@Controller
-@RequestMapping("/auth")
+@RestController
+@RequestMapping("/api/auth")
 public class AuthController {
 
     private final RegistrationService registrationService;
@@ -22,32 +27,33 @@ public class AuthController {
         this.personValidator = personValidator;
     }
 
-    @GetMapping("/login")
-    public String loginPage() {
-        return "auth/login";
-    }
 
-    @GetMapping("/registration")
-    public String registrationPage(@ModelAttribute("person") Person person) {
-        return "auth/registration";
-    }
+    @PostMapping(value="/register", consumes = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<?> performRegistration(@RequestBody RegisterRequest registerRequest) {
+//        personValidator.validate(person, bindingResult);
+//
+//        if (bindingResult.hasErrors())
+//            return "/auth/registration";
+//
+//        registrationService.register(person);
 
-    @PostMapping("/registration")
-    public String performRegistration(@ModelAttribute("person") @Valid Person person,
-                                      BindingResult bindingResult) {
-        personValidator.validate(person, bindingResult);
+        RegisterResponse response = registrationService.register(registerRequest);
 
-        if (bindingResult.hasErrors())
-            return "/auth/registration";
-
-        registrationService.register(person);
-
-        return "redirect:/auth/login";
+        if (response.isSuccess()) {
+            return ResponseEntity.ok(response);
+        } else {
+            return ResponseEntity.badRequest().body(response);
+        }
     }
 
     @GetMapping("/hello")
     public String helloPage() {
         return "/auth/hello";
+    }
+
+    @GetMapping("/check")
+    public ResponseEntity<?> checkPerson() {
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
 //    public Person convertToPerson(PersonDTO personDTO) {
