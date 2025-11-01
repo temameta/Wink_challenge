@@ -35,4 +35,11 @@ public class GradesController {
 
         return HttpStatus.OK;
     }
+
+    @PostMapping("/do-grade")
+    public HttpStatus doGrade(@RequestBody GoalDTO goalDTO,
+                            Authentication auth) {
+
+        return null;
+    }
 }

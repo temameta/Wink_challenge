@@ -1,9 +1,7 @@
 package org.example.wink_challenge.entities;
 
 import jakarta.persistence.*;
-import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Size;
 
 @Entity
 @Table(name = "grades")
@@ -29,14 +27,20 @@ public class GradeEntity {
     @NotNull
     private GoalEntity goal;
 
-    @Column(name = "grade")
-    private int grade;
+    @Column(name = "grade_succes")
+    private int gradeSuccess;
+
+    @Column(name = "grade_communicate")
+    private int gradeCommunicate;
 
     @Column(name = "is_graded")
     private boolean graded;
 
-    @Column(name = "comment")
-    private String comment;
+    @Column(name = "comment_to_improve")
+    private String commentToImprove;
+
+    @Column(name = "comment_compliment")
+    private String commentCompliment;
 
     public GradeEntity() {
     }
@@ -49,14 +53,16 @@ public class GradeEntity {
         this.graded = graded;
     }
 
-    public GradeEntity(int id, Person sender, Person receiver, GoalEntity goal, int grade, boolean graded, String comment) {
+    public GradeEntity(int id, Person sender, Person receiver, GoalEntity goal, int gradeSuccess, int gradeCommunicate, boolean graded, String commentToImprove, String commentCompliment) {
         this.id = id;
         this.sender = sender;
         this.receiver = receiver;
         this.goal = goal;
-        this.grade = grade;
+        this.gradeSuccess = gradeSuccess;
+        this.gradeCommunicate = gradeCommunicate;
         this.graded = graded;
-        this.comment = comment;
+        this.commentToImprove = commentToImprove;
+        this.commentCompliment = commentCompliment;
     }
 
     public int getId() {
@@ -91,12 +97,12 @@ public class GradeEntity {
         this.goal = goal;
     }
 
-    public int getGrade() {
-        return grade;
+    public int getGradeSuccess() {
+        return gradeSuccess;
     }
 
-    public void setGrade(int grade) {
-        this.grade = grade;
+    public void setGradeSuccess(int grade) {
+        this.gradeSuccess = grade;
     }
 
     public boolean isGraded() {
@@ -107,11 +113,27 @@ public class GradeEntity {
         this.graded = graded;
     }
 
-    public String getComment() {
-        return comment;
+    public String getCommentToImprove() {
+        return commentToImprove;
     }
 
-    public void setComment(String comment) {
-        this.comment = comment;
+    public void setCommentToImprove(String comment) {
+        this.commentToImprove = comment;
+    }
+
+    public int getGradeCommunicate() {
+        return gradeCommunicate;
+    }
+
+    public void setGradeCommunicate(int gradeCommunicate) {
+        this.gradeCommunicate = gradeCommunicate;
+    }
+
+    public String getCommentCompliment() {
+        return commentCompliment;
+    }
+
+    public void setCommentCompliment(String commentCompliment) {
+        this.commentCompliment = commentCompliment;
     }
 }

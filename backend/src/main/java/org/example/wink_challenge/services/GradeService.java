@@ -40,4 +40,8 @@ public class GradeService {
             gradesRepository.save(gradeEntity);
         }
     }
+
+    public void doGrade() {
+
+    }
 }
