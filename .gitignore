@@ -61,6 +61,7 @@ backend/.idea
 *.iml
 *.ipr
 .idea/
+frontend/.idea
 
 
 ### NetBeans ###

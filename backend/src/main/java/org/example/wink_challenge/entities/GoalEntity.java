@@ -1,6 +1,7 @@
 package org.example.wink_challenge.entities;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotNull;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDate;
@@ -34,10 +35,15 @@ public class GoalEntity {
     @Column(nullable = false)
     private List<TaskEntity> tasks = new ArrayList<>();
 
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
+    @NotNull
+    private Person owner;
+
     public GoalEntity() {
     }
 
-    public GoalEntity(long id, String name, String description, LocalDate deadline, boolean isDone, List<TaskEntity> tasks, String expectedResult) {
+    public GoalEntity(long id, String name, String description, LocalDate deadline, boolean isDone, List<TaskEntity> tasks, String expectedResult, Person owner) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -45,6 +51,7 @@ public class GoalEntity {
         this.deadline = deadline;
         this.isDone = isDone;
         this.tasks = tasks;
+        this.owner = owner;
     }
 
     public void addTask(TaskEntity task) {
@@ -108,5 +115,11 @@ public class GoalEntity {
         this.tasks = tasks;
     }
 
+    public Person getOwner() {
+        return owner;
+    }
 
+    public void setOwner(Person owner) {
+        this.owner = owner;
+    }
 }

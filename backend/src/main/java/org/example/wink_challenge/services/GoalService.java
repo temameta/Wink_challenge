@@ -3,6 +3,7 @@ package org.example.wink_challenge.services;
 import org.example.wink_challenge.dtos.GoalDTO;
 import org.example.wink_challenge.dtos.TaskDTO;
 import org.example.wink_challenge.entities.GoalEntity;
+import org.example.wink_challenge.entities.Person;
 import org.example.wink_challenge.entities.TaskEntity;
 import org.example.wink_challenge.repositories.GoalRepository;
 import org.springframework.stereotype.Service;
@@ -64,7 +65,7 @@ public class GoalService {
         );
     }
 
-    public GoalEntity toGoalEntity(GoalDTO goalDTO) {
+    public GoalEntity toGoalEntity(GoalDTO goalDTO, Person owner) {
         GoalEntity goalEntity = new GoalEntity();
         goalEntity.setName(goalDTO.getName());
         goalEntity.setDescription(goalDTO.getDescription());
@@ -77,7 +78,12 @@ public class GoalService {
             tasksEntity.add(taskEntity);
         }
         goalEntity.setTasks(tasksEntity);
+        goalEntity.setOwner(owner);
         return goalEntity;
+    }
+
+    public List<GoalEntity> getPersonalGoals(Person owner) {
+        return goalRepository.findAllByOwner(owner);
     }
 
 }
