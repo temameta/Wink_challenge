@@ -1,17 +1,13 @@
 package org.example.wink_challenge.controllers;
 
-import jakarta.validation.Valid;
 import org.example.wink_challenge.dto.RegisterRequest;
 import org.example.wink_challenge.dto.RegisterResponse;
-import org.example.wink_challenge.entities.Person;
 import org.example.wink_challenge.services.RegistrationService;
 import org.example.wink_challenge.util.PersonValidator;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Controller;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
