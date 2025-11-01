@@ -1,10 +1,9 @@
 package org.example.wink_challenge.entities;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.ColumnDefault;
 
-import java.time.Instant;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tasks")
@@ -13,31 +12,46 @@ public class TaskEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    @ManyToOne(fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "goal_id", nullable = false)
+    private GoalEntity goal;
+
     @Column(nullable = false, unique = true)
     private String name;
 
-    @Column(nullable = false)
+    @Column(nullable = false, unique = true)
     private String description;
 
     @Column(nullable = false)
     private LocalDate deadline;
 
+    @Column(nullable = false)
+    private String priority;
+
     @Column(nullable = false, name = "is_done")
+    @ColumnDefault("false")
     private boolean isDone;
 
-    public TaskEntity() {
-    }
-
-    public TaskEntity(long id, String name, String description, LocalDate deadline, boolean isDone) {
+    public TaskEntity(long id, GoalEntity goal, String name, String description, LocalDate deadline, String priority, boolean isDone) {
         this.id = id;
+        this.goal = goal;
         this.name = name;
         this.description = description;
         this.deadline = deadline;
+        this.priority = priority;
         this.isDone = isDone;
     }
 
-    public Long getId() {
+    public TaskEntity() {
+
+    }
+
+    public long getId() {
         return id;
+    }
+
+    public GoalEntity getGoal() {
+        return goal;
     }
 
     public String getName() {
@@ -48,12 +62,12 @@ public class TaskEntity {
         return description;
     }
 
-    public LocalDate getDeadline() {
-        return deadline;
-    }
-
     public void setId(long id) {
         this.id = id;
+    }
+
+    public void setGoal(GoalEntity goal) {
+        this.goal = goal;
     }
 
     public void setName(String name) {
@@ -64,15 +78,28 @@ public class TaskEntity {
         this.description = description;
     }
 
-    public void setDeadline(LocalDate deadline) {
-        this.deadline = deadline;
+    public LocalDate getDeadline() {
+        return deadline;
+    }
+
+    public String getPriority() {
+        return priority;
     }
 
     public boolean isDone() {
         return isDone;
     }
 
+    public void setDeadline(LocalDate deadline) {
+        this.deadline = deadline;
+    }
+
+    public void setPriority(String priority) {
+        this.priority = priority;
+    }
+
     public void setDone(boolean done) {
         isDone = done;
     }
 }
+
