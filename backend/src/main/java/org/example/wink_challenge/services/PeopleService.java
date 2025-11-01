@@ -28,11 +28,15 @@ public class PeopleService {
         return peopleRepository.findAll();
     }
 
-//    public Person convertToPerson(PersonDTO personDTO) {
-//        Person person = new Person();
-//        person.setUsername(personDTO.getUsername());
-//
-//    }
+    public Person convertToPerson(PersonDTO personDTO) {
+        Person person = new Person();
+
+        person.setUsername(personDTO.getUsername());
+        person.setId(personDTO.getId());
+        person.setPassword("filler");
+
+        return person;
+    }
 
     public PersonDTO convertToDTO(Person person) {
         return new PersonDTO(person.getUsername(), person.getId());
