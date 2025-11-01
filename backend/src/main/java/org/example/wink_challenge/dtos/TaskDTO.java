@@ -3,17 +3,17 @@ package org.example.wink_challenge.dtos;
 import java.time.LocalDate;
 
 public class TaskDTO {
-    private Long id;
+    private long id;
     private String name;
     private String description;
     private LocalDate deadline;
     private String priority;
     private boolean isDone;
-    private Long goalId; // Вместо целого GoalEntity
+    private long goalId; // Вместо целого GoalEntity
 
     public TaskDTO() {}
 
-    public TaskDTO(Long id, String name, String description, LocalDate deadline,
+    public TaskDTO(long id, String name, String description, LocalDate deadline,
                    String priority, boolean isDone, Long goalId) {
         this.id = id;
         this.name = name;
@@ -24,11 +24,11 @@ public class TaskDTO {
         this.goalId = goalId;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
@@ -72,11 +72,11 @@ public class TaskDTO {
         isDone = done;
     }
 
-    public Long getGoalId() {
+    public long getGoalId() {
         return goalId;
     }
 
-    public void setGoalId(Long goalId) {
+    public void setGoalId(long goalId) {
         this.goalId = goalId;
     }
 }

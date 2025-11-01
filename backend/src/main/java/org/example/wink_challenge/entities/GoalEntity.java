@@ -4,6 +4,7 @@ import jakarta.persistence.*;
 import org.hibernate.annotations.ColumnDefault;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -29,9 +30,9 @@ public class GoalEntity {
     @ColumnDefault("false")
     private boolean isDone;
 
-    @OneToMany(fetch = FetchType.LAZY, mappedBy = "goal")
+    @OneToMany(mappedBy = "goal", cascade = CascadeType.ALL)
     @Column(nullable = false)
-    private List<TaskEntity> tasks;
+    private List<TaskEntity> tasks = new ArrayList<>();
 
     public GoalEntity() {
     }
@@ -44,6 +45,11 @@ public class GoalEntity {
         this.deadline = deadline;
         this.isDone = isDone;
         this.tasks = tasks;
+    }
+
+    public void addTask(TaskEntity task) {
+        tasks.add(task);
+        task.setGoal(this);
     }
 
     public Long getId() {

@@ -4,7 +4,7 @@ import java.time.LocalDate;
 import java.util.List;
 
 public class GoalDTO {
-    private Long id;
+    private long id;
     private String name;
     private String description;
     private String expectedResult;
@@ -13,10 +13,10 @@ public class GoalDTO {
     private List<TaskDTO> tasks;
 
     // Конструкторы, геттеры, сеттеры
-    public GoalDTO() {}
+    public GoalDTO() {
+    }
 
-    public GoalDTO(Long id, String name, String description, String expectedResult,
-                   LocalDate deadline, boolean isDone, List<TaskDTO> tasks) {
+    public GoalDTO(long id, String name, String description, String expectedResult, LocalDate deadline, boolean isDone, List<TaskDTO> tasks) {
         this.id = id;
         this.name = name;
         this.description = description;
@@ -26,11 +26,11 @@ public class GoalDTO {
         this.tasks = tasks;
     }
 
-    public Long getId() {
+    public long getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(long id) {
         this.id = id;
     }
 
