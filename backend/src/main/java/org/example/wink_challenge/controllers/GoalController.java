@@ -67,4 +67,11 @@ public class GoalController {
 
         return goalDTOS;
     }
+
+    @GetMapping("/get/goals-to-grade")
+    public List<GoalDTO> getGoalsToGrade(Authentication auth) {
+        Person owner = peopleService.findUserByUsername(auth.getName()).get();
+
+        return goalService.getGoalsToGrade(owner);
+    }
 }

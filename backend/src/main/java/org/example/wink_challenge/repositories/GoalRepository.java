@@ -11,10 +11,15 @@ import java.util.List;
 
 @Repository
 public interface GoalRepository extends JpaRepository<GoalEntity, Long> {
+
     GoalEntity findByName(String name);
+
     List<GoalEntity> findAllByIsDone(boolean isDone);
+
     List<GoalEntity> findByDeadline(LocalDate deadline);
+
     GoalEntity findById(long id);
 
     List<GoalEntity> findAllByOwner(Person owner);
+
 }

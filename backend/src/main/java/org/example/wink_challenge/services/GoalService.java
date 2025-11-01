@@ -3,9 +3,12 @@ package org.example.wink_challenge.services;
 import org.example.wink_challenge.dto.GoalDTO;
 import org.example.wink_challenge.dto.TaskDTO;
 import org.example.wink_challenge.entities.GoalEntity;
+import org.example.wink_challenge.entities.GradeEntity;
 import org.example.wink_challenge.entities.Person;
 import org.example.wink_challenge.entities.TaskEntity;
 import org.example.wink_challenge.repositories.GoalRepository;
+import org.example.wink_challenge.repositories.GradesRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
@@ -16,10 +19,13 @@ import java.util.List;
 public class GoalService {
     private final GoalRepository goalRepository;
     private final TaskService taskService;
+    private final GradesRepository gradesRepository;
 
-    public GoalService(GoalRepository goalRepository, TaskService taskService) {
+    @Autowired
+    public GoalService(GoalRepository goalRepository, TaskService taskService, GradesRepository gradesRepository) {
         this.goalRepository = goalRepository;
         this.taskService = taskService;
+        this.gradesRepository = gradesRepository;
     }
 
     public GoalEntity saveGoal(GoalEntity goalEntity) {
@@ -85,4 +91,19 @@ public class GoalService {
         return goalRepository.findAllByOwner(owner);
     }
 
+    public List<GoalDTO> getGoalsToGrade(Person user) {
+        List<GradeEntity> grades = gradesRepository.findByReceiverId(user.getId());
+        List<GoalEntity> goals = new ArrayList<>();
+        List<GoalDTO> goalDTOs = new ArrayList<>();
+
+        for (GradeEntity gradeEntity : grades) {
+            goals.add(gradeEntity.getGoal());
+        }
+
+        for (GoalEntity goalEntity : goals) {
+            goalDTOs.add(toGoalDTO(goalEntity));
+        }
+
+        return goalDTOs;
+    }
 }
