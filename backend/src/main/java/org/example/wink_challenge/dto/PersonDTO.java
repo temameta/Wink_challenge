@@ -1,27 +1,16 @@
 package org.example.wink_challenge.dto;
 
-import jakarta.persistence.Column;
-import jakarta.validation.constraints.*;
-
 public class PersonDTO {
-    @NotEmpty(message = "Имя не должно быть пустым")
-    @Size(min = 2, max = 100, message = "Имя должно быть длиной от 2 до 100 символов")
-    @NotNull
+
     private String username;
-
-    @NotNull
-    @NotEmpty(message = "Не должен быть пустым")
-    private String password;
-
-    @Override
-    public String toString() {
-        return "PersonDTO{" +
-                "username='" + username + '\'' +
-                ", password='" + password + '\'' +
-                '}';
-    }
+    private int id;
 
     public PersonDTO() {
+    }
+
+    public PersonDTO(String username, int id) {
+        this.username = username;
+        this.id = id;
     }
 
     public String getUsername() {
@@ -32,12 +21,11 @@ public class PersonDTO {
         this.username = username;
     }
 
-
-    public String getPassword() {
-        return password;
+    public int getId() {
+        return id;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setId(int id) {
+        this.id = id;
     }
 }

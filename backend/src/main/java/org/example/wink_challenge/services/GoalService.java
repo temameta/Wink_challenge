@@ -1,7 +1,7 @@
 package org.example.wink_challenge.services;
 
-import org.example.wink_challenge.dtos.GoalDTO;
-import org.example.wink_challenge.dtos.TaskDTO;
+import org.example.wink_challenge.dto.GoalDTO;
+import org.example.wink_challenge.dto.TaskDTO;
 import org.example.wink_challenge.entities.GoalEntity;
 import org.example.wink_challenge.entities.Person;
 import org.example.wink_challenge.entities.TaskEntity;
@@ -11,7 +11,6 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class GoalService {

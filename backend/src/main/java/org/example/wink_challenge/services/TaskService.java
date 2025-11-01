@@ -1,6 +1,6 @@
 package org.example.wink_challenge.services;
 
-import org.example.wink_challenge.dtos.TaskDTO;
+import org.example.wink_challenge.dto.TaskDTO;
 import org.example.wink_challenge.entities.TaskEntity;
 import org.springframework.stereotype.Service;
 

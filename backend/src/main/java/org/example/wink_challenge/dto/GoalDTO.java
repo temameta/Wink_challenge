@@ -1,4 +1,4 @@
-package org.example.wink_challenge.dtos;
+package org.example.wink_challenge.dto;
 
 import java.time.LocalDate;
 import java.util.List;
