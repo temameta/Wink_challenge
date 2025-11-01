@@ -6,7 +6,14 @@ import org.hibernate.annotations.ColumnDefault;
 import java.time.LocalDate;
 
 @Entity
-@Table(name = "tasks")
+@Table(
+        name = "tasks",
+        uniqueConstraints = {
+        @UniqueConstraint(
+                name = "uq_task_in_goal",
+                columnNames = {"goal_id", "name"}
+        )
+})
 public class TaskEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -16,7 +23,7 @@ public class TaskEntity {
     @JoinColumn(name = "goal_id", nullable = false)
     private GoalEntity goal;
 
-    @Column(nullable = false, unique = true)
+    @Column(nullable = false)
     private String name;
 
     @Column(nullable = false)
