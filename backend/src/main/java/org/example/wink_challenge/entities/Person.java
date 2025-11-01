@@ -32,6 +32,12 @@ public class Person {
     @OneToMany(mappedBy = "owner")
     private List<GoalEntity> goal = new ArrayList<GoalEntity>();
 
+    @OneToMany(mappedBy = "sender")
+    private List<GradeEntity> sendGrades = new ArrayList<>();
+
+    @OneToMany(mappedBy = "receiver")
+    private List<GradeEntity> receivedGrades = new ArrayList<>();
+
 
     public Person() {
     }
