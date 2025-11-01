@@ -3,6 +3,9 @@ package org.example.wink_challenge.entities;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "person")
 public class Person {
@@ -25,6 +28,10 @@ public class Person {
 
     @Column(name="role")
     private String role;
+
+    @OneToMany(mappedBy = "owner")
+    private List<GoalEntity> goal = new ArrayList<GoalEntity>();
+
 
     public Person() {
     }
