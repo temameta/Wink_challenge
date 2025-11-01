@@ -1,37 +1,29 @@
 package org.example.wink_challenge.services;
 
+import org.example.wink_challenge.dtos.TaskDTO;
 import org.example.wink_challenge.entities.TaskEntity;
-import org.example.wink_challenge.repositories.TaskRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
-import java.time.Instant;
-import java.time.LocalDate;
-import java.util.List;
 
 @Service
 public class TaskService {
-    private final TaskRepository taskRepository;
-
-    public TaskService(TaskRepository taskRepository) {
-        this.taskRepository = taskRepository;
+    public TaskDTO toTaskDTO(TaskEntity taskEntity) {
+        return new TaskDTO(
+                taskEntity.getId(),
+                taskEntity.getName(),
+                taskEntity.getDescription(),
+                taskEntity.getDeadline(),
+                taskEntity.getPriority(),
+                taskEntity.isDone(),
+                taskEntity.getGoal().getId() // Только ID цели
+        );
     }
 
-    public TaskEntity saveTask(TaskEntity taskEntity) {
-        return taskRepository.save(taskEntity);
+    public TaskEntity toTaskEntity(TaskDTO taskDTO) {
+        TaskEntity taskEntity = new TaskEntity();
+        taskEntity.setName(taskDTO.getName());
+        taskEntity.setDescription(taskDTO.getDescription());
+        taskEntity.setDeadline(taskDTO.getDeadline());
+        taskEntity.setPriority(taskDTO.getPriority());
+        return taskEntity;
     }
-
-    public List<TaskEntity> getAllTasks() {
-        return taskRepository.findAll();
-    }
-
-    public TaskEntity getTaskByName(String name) {
-        return taskRepository.findByName(name);
-    }
-
-    public List<TaskEntity> getTasksByIsDoneTasks(boolean isDone) {return taskRepository.findByIsDone(isDone);}
-
-    public List<TaskEntity> getTasksByDeadline(LocalDate deadline) {return taskRepository.findByDeadline(deadline);}
-
-    public TaskEntity getTaskById(long id) {return taskRepository.findById(id);}
 }
