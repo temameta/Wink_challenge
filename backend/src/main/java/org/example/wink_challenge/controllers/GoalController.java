@@ -61,9 +61,14 @@ public class GoalController {
     public List<GoalEntity> getGoalsByDeadline(@PathVariable LocalDate deadline) {return goalService.getGoalsByDeadline(deadline);}
 
     @GetMapping("/get/personal-goals")
-    public List<GoalEntity> getPersonalGoals(Authentication auth) {
+    public List<GoalDTO> getPersonalGoals(Authentication auth) {
         Person owner = peopleService.findUserByUsername(auth.getName()).get();
 
-        return goalService.getPersonalGoals(owner);
+        List<GoalDTO> goalDTOS = new ArrayList<>();
+        for(GoalEntity goalEntity : goalService.getPersonalGoals(owner)) {
+            goalDTOS.add(goalService.toGoalDTO(goalEntity));
+        }
+
+        return goalDTOS;
     }
 }
