@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "app/_global-error/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
+  "/create-goal/page": "app/create-goal/page.js",
+  "/favicon.ico/route": "app/favicon.ico/route.js",
+  "/goal/[id]/page": "app/goal/[id]/page.js",
+  "/goals-done/page": "app/goals-done/page.js",
+  "/login/page": "app/login/page.js",
+  "/page": "app/page.js",
+  "/register/page": "app/register/page.js",
+  "/self-assessment/[id]/page": "app/self-assessment/[id]/page.js"
+}

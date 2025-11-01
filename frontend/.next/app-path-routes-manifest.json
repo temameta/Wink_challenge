@@ -1,0 +1,12 @@
+{
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found",
+  "/create-goal/page": "/create-goal",
+  "/favicon.ico/route": "/favicon.ico",
+  "/goal/[id]/page": "/goal/[id]",
+  "/goals-done/page": "/goals-done",
+  "/login/page": "/login",
+  "/page": "/",
+  "/register/page": "/register",
+  "/self-assessment/[id]/page": "/self-assessment/[id]"
+}
