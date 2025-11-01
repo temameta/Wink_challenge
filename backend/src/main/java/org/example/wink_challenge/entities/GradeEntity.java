@@ -36,7 +36,6 @@ public class GradeEntity {
     private boolean graded;
 
     @Column(name = "comment")
-    @NotNull
     private String comment;
 
     public GradeEntity() {

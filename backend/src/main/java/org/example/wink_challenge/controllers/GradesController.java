@@ -2,6 +2,7 @@ package org.example.wink_challenge.controllers;
 
 import org.example.wink_challenge.dto.GoalDTO;
 import org.example.wink_challenge.dto.GradeDTO;
+import org.example.wink_challenge.dto.GradeRequest;
 import org.example.wink_challenge.dto.PersonDTO;
 import org.example.wink_challenge.services.GradeService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,10 +29,9 @@ public class GradesController {
 
 
     @PostMapping("/create")
-    public HttpStatus create(@RequestBody List<PersonDTO> people,
-                              @RequestBody int goalId,
+    public HttpStatus create(@RequestBody GradeRequest gradeRequest,
                               Authentication auth) {
-        gradeService.createGrades(people, goalId, auth.getName());
+        gradeService.createGrades(gradeRequest.getPeople(), gradeRequest.getGoalId(), auth.getName());
 
         return HttpStatus.OK;
     }
