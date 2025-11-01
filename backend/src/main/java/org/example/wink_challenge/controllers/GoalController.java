@@ -1,13 +1,10 @@
 package org.example.wink_challenge.controllers;
 
-import jakarta.servlet.http.HttpSession;
-import org.example.wink_challenge.dtos.GoalDTO;
-import org.example.wink_challenge.dtos.TaskDTO;
+import org.example.wink_challenge.dto.GoalDTO;
 import org.example.wink_challenge.entities.GoalEntity;
 import org.example.wink_challenge.entities.Person;
 import org.example.wink_challenge.services.GoalService;
 import org.example.wink_challenge.services.PeopleService;
-import org.example.wink_challenge.services.TaskService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
@@ -15,7 +12,6 @@ import org.springframework.web.bind.annotation.*;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 
 @RestController
 @RequestMapping(path="/api/goals")
